@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>você gosta de gatos?</title>
+    <style>
+        body {
+            background-color: rgb(184, 0, 197);
+            overflow: hidden;
+        }
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        .center{
+            display: flex;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin: 0 20px;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .img{
+            display: block;
+            background-image: url(https://i.pinimg.com/564x/c2/99/ad/c299ad7f48e0884f61f14585ab9c481f.jpg);
+            background-size: cover;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 300px;
+            width: 300px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>você gosta de gatos?</h1>
+    </div>
+    <div class="img"></div>
+    <div class="btn">
+        <button id="sim"><a href="https://youtu.be/kqKDnZtOFYk?si=99CcaM0slucGxzao">Sim</a></button>
+        <button id="nao">Não</button>
+    </div>
+</body>
+<script>
+    const naoBtn = document.querySelector('#nao');
+    const simBtn = document.querySelector('#sim');
+    const img = document.querySelector('.img');
+
+    simBtn.addEventListener('mouseover', ()=>{
+        img.style.backgroundImage = "url('https://i.pinimg.com/564x/c2/99/ad/c299ad7f48e0884f61f14585ab9c481f.jpg')"
+    });
+    simBtn.addEventListener('mouseout', ()=>{
+        img.style.backgroundImage = "url('https://i.pinimg.com/564x/87/00/38/870038038040c3f1a43ecda1745eb842.jpg')"
+    });
+    naoBtn.addEventListener('mouseover', ()=>{
+       naoBtn.style.position = 'absolute';
+        naoBtn.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+        naoBtn.style.top = Math.floor(Math.random() * window.innerHeight) + "px"; 
+    });
+</script>
+</html>
